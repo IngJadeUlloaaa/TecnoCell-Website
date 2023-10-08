@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iphone</title>
+  <link rel="stylesheet" href="samsung_style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+
+<body>
+  <header class="container-father-navmenu-home">
+    <article class="container-jr-navmenu-home">
+      <!--left-->
+      <div class="container-data-left-navmenu-home">
+        <ul class="container-list-left-navmenu-home">
+          <li class="links-list-left-navmenu-home"><a href="#" class="link-navmenu-left-home"><i
+                class="uil uil-bars"></i>Home</a></li>
+          <li class="links-list-left-navmenu-home"><a href="javascript:void(0);" class="link-navmenu-left-home"
+              onclick="searchProducts()"><i class="uil uil-search"></i>Search</a></li>
+        </ul>
+      </div>
+      <!--center-->
+      <div class="container-data-center-home-navmenu-home">
+        <a href="index.php" class="container-data-principal-center-navmenu-home">
+          <h2 class="title-center-navmenu-home">TECNO-CELL</h2>
+        </a>
+      </div>
+      <!--right-->
+      <div class="container-right-navmenu-home">
+        <ul class="container-list-right-navmenu-home">
+          <li class="links-list-right-navmenu-home"><a href="carrito.html" class="link-navmenu-right-home" id="checkout"
+              onclick="pay()"><i class="uil uil-shopping-cart-alt"></i>Store</a></li>
+          <li class="links-list-right-navmenu-home"><a href="https://www.facebook.com/profile.php?id=100083208826905&mibextid=ZbWKwL" class="link-navmenu-right-home"><i
+                class="uil uil-mobile-android"></i>Contact</a></li>
+        </ul>
+      </div>
+    </article>
+  </header>
+  <!--slider-->
+  <section class="container-father-slider-samsung-home">
+    <div class="container-data-left-about-home">
+      <div class="container-title-principal-about-home">
+        <h2 class="title-principal-about-home">Apple - Iphone 14 PRO SERIES</h2>
+      </div>
+      <div class="container-logo-about-home">
+        <ul class="list-logo-about-home">
+          <li class="list-dashboard-about"><i class="uil uil-amazon" id="lg-about-home"></i>Amazon</li>
+          <li class="list-dashboard-about"><i class="uil uil-adobe" id="lg-about-home"></i>AirLine</li>
+          <li class="list-dashboard-about"><i class="uil uil-head-side" id="lg-about-home"></i>Mercado
+            Libre</li>
+        </ul>
+      </div>
+    </div>
+    <article class="container-jr-slider-samsung-home">
+      <div class="carousel-container-samsung-home">
+        <div class="carousel-slide-samsung-home">
+          <img src="resources/ci1.png" alt="Imagen 1" class="img-carrusel-samsung-home">
+          <div class="container-feature-samsung-home">
+            <p class="price-principal-carousel-samsung-home">$15,999.00</p>
+            <h2 class="title-principal-carousel-samsung-home">Apple - Iphone 13 PRO</h2>
+            <p class="description-principal-carousel-samsung-home">128GB RAM Color - Golden</p>
+            <a href="#" class="container-btn-comprar-samsung-home">
+              <button class="btn-carousel-samsung-home"
+                onclick="add('Apple - Iphone 13 PRO', 15999.00)">Comprar</button>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-slide-samsung-home">
+          <img src="resources/ci2.png" alt="Imagen 1" class="img-carrusel-samsung-home">
+          <div class="container-feature-samsung-home">
+            <p class="price-principal-carousel-samsung-home">$24,990.00</p>
+            <h2 class="title-principal-carousel-samsung-home">Apple - Iphone 13 PRO MAX 256GB</h2>
+            <p class="description-principal-carousel-samsung-home">12GB RAM Color - Grenn</p>
+            <a href="#" class="container-btn-comprar-samsung-home">
+              <button class="btn-carousel-samsung-home"
+                onclick="add('Apple - Iphone 13 PRO MAX 256GB', 24990.00)">Comprar</button>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-slide-samsung-home">
+          <img src="resources/ci3.png" alt="Imagen 1" class="img-carrusel-samsung-home">
+          <div class="container-feature-samsung-home">
+            <p class="price-principal-carousel-samsung-home">$24,999.00</p>
+            <h2 class="title-principal-carousel-samsung-home">Apple - Iphone 13 PRO MAX 256GB</h2>
+            <p class="description-principal-carousel-samsung-home">12GB Color - Black</p>
+            <a href="#" class="container-btn-comprar-samsung-home">
+              <button class="btn-carousel-samsung-home"
+                onclick="add('Apple - Iphone 13 PRO MAX 256GB', 24999.00)">Comprar</button>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-slide-samsung-home">
+          <img src="resources/ci4.png" alt="Imagen 1" class="img-carrusel-samsung-home">
+          <div class="container-feature-samsung-home">
+            <p class="price-principal-carousel-samsung-home">$18,999.99</p>
+            <h2 class="title-principal-carousel-samsung-home">Apple - Iphone 13 PRO MAX</h2>
+            <p class="description-principal-carousel-samsung-home">256GB RAM Dual SIM Color - Blue</p>
+            <a href="#" class="container-btn-comprar-samsung-home">
+              <button class="btn-carousel-samsung-home"
+                onclick="add('Apple - Iphone 13 PRO MAX', 18999.99)">Comprar</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <script>
+    function searchProducts() {
+      // Obtiene el texto ingresado por el usuario en el campo de búsqueda
+      const searchTerm = prompt("¡Ingrese el Producto que Desea Buscar!");
+
+      // Convierte el texto ingresado a minúsculas para que no sea sensible a mayúsculas y minúsculas
+      const searchTermLower = searchTerm.toLowerCase();
+
+      // Redirige al usuario a la página correspondiente según su búsqueda
+      if (searchTermLower === 'samsung') {
+        window.location.href = 'samsung.html';
+      } else if (searchTermLower === 'iphone') {
+        window.location.href = 'iphone.html';
+      } else {
+        alert('Producto no encontrado.');
+      }
+    }
+  </script>
+</body>
+<script src="iphone.js"></script>
+
+</html>
